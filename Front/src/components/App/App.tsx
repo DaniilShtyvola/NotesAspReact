@@ -55,9 +55,6 @@ const App = () => {
             const decodedToken = JSON.parse(atob(response.data.token.split('.')[1]));
             const roles = decodedToken["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
             setShowUsers(roles && roles.includes('Admin'));
-
-            console.log(decodedToken);
-            console.log(roles);
          })
          .catch((error) => {
             console.error(error);

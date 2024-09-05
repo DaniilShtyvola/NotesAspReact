@@ -13,12 +13,12 @@ namespace Notes.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly DbAplication1Context _context;
+        private readonly DbNotesContext _context;
 
         public UserController(
             UserManager<IdentityUser> userManager,
             RoleManager<IdentityRole> roleManager,
-            DbAplication1Context context)
+            DbNotesContext context)
         {
             _userManager = userManager;
             _roleManager = roleManager;

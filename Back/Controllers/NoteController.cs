@@ -13,9 +13,9 @@ namespace Notes.Controllers
     [Authorize]
     public class NotesController : ControllerBase
     {
-        private readonly DbAplication1Context _context;
+        private readonly DbNotesContext _context;
 
-        public NotesController(DbAplication1Context context)
+        public NotesController(DbNotesContext context)
         {
             _context = context;
         }

@@ -11,11 +11,11 @@ ConfigurationManager configuration = builder.Configuration;
 // Add services to the container.
 
 // For Entity Framework
-builder.Services.AddDbContext<DbAplication1Context>(options => options.UseSqlServer(configuration.GetConnectionString("ConnStr")));
+builder.Services.AddDbContext<DbNotesContext>(options => options.UseSqlServer(configuration.GetConnectionString("ConnStr")));
 
 // For Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<DbAplication1Context>()
+    .AddEntityFrameworkStores<DbNotesContext>()
     .AddDefaultTokenProviders();
 
 // Adding Authentication
